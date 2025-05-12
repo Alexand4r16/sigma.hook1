@@ -57,7 +57,6 @@ elseif not Drawing then
     protectedLoad('https://raw.githubusercontent.com/Alexand4r16/sigma-hook/refs/heads/main/sigma_hook_debug.lua')
 end
 
-local placeid = game.PlaceId
 local dir = 'https://raw.githubusercontent.com/Alexand4r16/sigma-hook/refs/heads/main/'
 
 local statuslist = {}
@@ -82,8 +81,5 @@ local load = function(name)
     protectedLoad(`{dir}sigma_hook_debug.lua`)
 end
 
-if placeid == 13800717766 or placeid == 15479377118 or placeid == 16849012343 then
-    return load('fallensurvival')
-end
-
-protectedMessagebox(`This Game is Unsupported!\n\nIf you believe this is incorrect, please open a ticket in our discord! - discord.gg/2jycAcKvdw`, `sigma.hook [{placeid}]`, 48)
+-- Load for all places by default
+load('fallensurvival')
