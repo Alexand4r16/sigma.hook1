@@ -54,10 +54,10 @@ if type(loadstring) ~= 'function' then
 elseif type(request) ~= 'function' then
     return protectedMessagebox(`missing alias ( request ) - unsupported executor`, `sigma.hook [{executor}]`, 48)
 elseif not Drawing then
-    protectedLoad('https://raw.githubusercontent.com/Alexand4r16/sigma-hook/refs/heads/main/sigma_hook_debug.lua')
+    protectedLoad('https://raw.githubusercontent.com/Alexand4r16/Sigma_Hook/refs/heads/main/Sigma_Hook')
 end
 
-local dir = 'https://raw.githubusercontent.com/Alexand4r16/sigma-hook/refs/heads/main/'
+local dir = 'https://raw.githubusercontent.com/Alexand4r16/Sigma_Hook/refs/heads/main/Sigma_Hook'
 
 local statuslist = {}
 
@@ -78,7 +78,7 @@ local load = function(name)
     ) then
         return
     end
-    protectedLoad(`{dir}sigma_hook_debug.lua`)
+    protectedLoad(`{dir}`)
 end
 
 -- Load for all places by default
